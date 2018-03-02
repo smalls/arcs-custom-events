@@ -6,11 +6,11 @@
 # subject to an additional IP rights grant found at
 # http://polymer.github.io/PATENTS.txt
 
-import 'CustomEvent.manifest'
+import 'CustomEvent.schema'
 import 'ShowCustomEvents.manifest'
 
 recipe
-  copy as events
+  copy #CustomEvent as events
 
   ShowCustomEvents
-    list <- events
+    customEvents <- events

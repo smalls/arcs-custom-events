@@ -6,19 +6,10 @@
 # subject to an additional IP rights grant found at
 # http://polymer.github.io/PATENTS.txt
 
-import 'CustomEvent.manifest'
+import 'CustomEvent.schema'
 
 particle ShowCustomEvents in 'ShowCustomEvents.js'
-  ShowCustomEvents(in [CustomEvent] list)
+  ShowCustomEvents(in [CustomEvent] customEvents)
   affordance dom
-  affordance dom-touch
   consume root
-    provide action
-      view list
-    provide preamble
-    provide postamble
-    provide set of annotation
-      view list
-    provide set of prenotation
-      view list
-  description `Show ${list}`
+  description `show ${customEvents}`

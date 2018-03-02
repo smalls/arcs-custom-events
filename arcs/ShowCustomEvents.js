@@ -129,7 +129,7 @@ ${customeventStyles}
       return template;
     }
     _willReceiveProps(props) {
-      let items = props.list.map(({rawData}, i) => {
+      let items = props.customEvents.map(({rawData}, i) => {
         // TODO(sjmiles): rawData provides POJO access, but shortcuts schema-enforcing getters
         let item = Object.assign({}, rawData);
         item.image = resolver ? resolver(item.image) : item.image;
